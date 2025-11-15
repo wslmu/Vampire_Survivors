@@ -1,4 +1,4 @@
-Vampire Survivors – Steering Behaviors Edition (p5.js)
+Moujanni Wissal - Vampire Survivors – Steering Behaviors Edition (p5.js)
 Ce projet propose une adaptation minimaliste d’un gameplay inspiré de Vampire Survivors, entièrement fondé sur des agents autonomes et des forces physiques.
 Tous les déplacements sont générés par un modèle basé sur position → vitesse → accélération.
 Il utilise exclusivement :
