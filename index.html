@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vampire Survivors – Behaviors</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="libraries/p5.min.js"></script>
+</head>
+
+<body>
+
+  <!-- MENU PRINCIPAL -->
+  <div id="menu-container">
+    <div id="menu-box">
+      <h1 class="game-title">VAMPIRE SURVIVORS</h1>
+      <h2 class="subtitle">Version Behaviors</h2>
+
+      <button class="level-button" onclick="startLevel(1)">Niveau 1 – Tue 20 ennemis ou survit 30 secs</button>
+      <button class="level-button" onclick="startLevel(2)">Niveau 2 – MiniBoss Snake</button>
+      <button class="level-button" onclick="startLevel(3)">Niveau 3 – Snake + 20 ennemis</button>
+
+      <p class="menu-tip">Déplace la souris – Attaque automatique</p>
+    </div>
+  </div>
+
+  <!-- CANVAS -->
+  <div id="game-container"></div>
+
+  <!-- HUD -->
+  <div id="hud"></div>
+
+  <!-- HINT BAR (raccourcis clavier) -->
+ <div id="hint-bar">
+    O – Toggle Obstacle Mode | Click – Add Obstacle | M – Launch Missile
+</div>
+
+
+  <!-- UPGRADE MENU (WIN / LOSE) -->
+  <div id="upgrade-menu" class="menu-box" style="display:none;">
+  <h2 id="end-title">FIN DE PARTIE</h2>
+  <p class="menu-tip">Ajuste les paramètres puis rejoue ce niveau.</p>
+
+  <!-- SPEED -->
+  <div class="up-row" id="row-speed">
+    <label>Vitesse du joueur</label>
+    <input type="range" id="up-speed" min="2" max="10" step="0.5" value="3">
+    <span id="val-speed">3</span>
+  </div>
+
+  <!-- SHIELD -->
+  <div class="up-row" id="row-shield">
+    <label>Boucliers</label>
+    <input type="range" id="up-shield" min="0" max="5" step="1" value="0">
+    <span id="val-shield">0</span>
+  </div>
+
+  <!-- ENEMIES -->
+  <div class="up-row" id="row-enemies">
+    <label>Nombre d’ennemis</label>
+    <input type="range" id="up-enemies" min="5" max="50" step="1" value="10">
+    <span id="val-enemies">10</span>
+  </div>
+
+  <!-- SNAKES -->
+  <div class="up-row" id="row-snakes">
+    <label>Nombre de serpents</label>
+    <input type="range" id="up-snakes" min="1" max="5" step="1" value="1">
+    <span id="val-snakes">1</span>
+  </div>
+
+  <br>
+  <button class="level-button" onclick="applyUpgrades()">Rejouer avec ces paramètres</button>
+  <button class="level-button" onclick="backToMenu()">Retour au Menu</button>
+</div>
+
+  <!-- SCRIPTS -->
+  <script src="vehicle.js"></script>
+  <script src="player.js"></script>
+  <script src="enemy.js"></script>
+  <script src="bullet.js"></script>
+  <script src="snake.js"></script>
+  <script src="obstacle.js"></script>
+  <script src="particle.js"></script>
+  <script src="missile.js"></script>
+  <script src="sketch.js"></script>
+
+</body>
+</html>
